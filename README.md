@@ -40,6 +40,7 @@ Seleccione una opción del siguiente menú:
 Ingrese su opción: 1
 Ingrese la cantidad: 20
 20.00 Dólares son: 17645.00 Pesos Argentinos
+```
 🧩 Estructura del proyecto
 Principal.java: clase principal que ejecuta el programa, maneja el menú y realiza las conversiones.
 
