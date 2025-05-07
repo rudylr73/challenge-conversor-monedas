@@ -1,6 +1,4 @@
-# challenge-conversor-monedas
-Challenge Conversor de Monedas Programa Alura
-
+````markdown
 # 💱 Conversor de Monedas - Java + API ExchangeRate
 
 Este es un programa de consola escrito en Java que permite convertir entre distintas monedas utilizando datos en tiempo real obtenidos de la API pública de [ExchangeRate-API](https://www.exchangerate-api.com/). El objetivo principal es proporcionar una herramienta sencilla, precisa y actualizada para realizar conversiones básicas entre divisas.
@@ -40,75 +38,82 @@ Seleccione una opción del siguiente menú:
 Ingrese su opción: 1
 Ingrese la cantidad: 20
 20.00 Dólares son: 17645.00 Pesos Argentinos
-```
-🧩 Estructura del proyecto
-Principal.java: clase principal que ejecuta el programa, maneja el menú y realiza las conversiones.
+````
 
-Convertor.java: clase modelo que representa las tasas de cambio individuales.
+---
 
-RespuestaApi.java: clase auxiliar que representa la estructura completa del JSON de la API y permite deserialización con Gson.
+## 🧩 Estructura del proyecto
 
-pom.xml (opcional): si se desea gestionar dependencias con Maven, como la librería Gson.
+* `Principal.java`: clase principal que ejecuta el programa, maneja el menú y realiza las conversiones.
+* `Convertor.java`: clase modelo que representa las tasas de cambio individuales.
+* `RespuestaApi.java`: clase auxiliar que representa la estructura completa del JSON de la API y permite deserialización con Gson.
+* `pom.xml` (opcional): si se desea gestionar dependencias con Maven, como la librería Gson.
 
-🛠️ Requisitos
-JDK 11 o superior (por el uso de HttpClient)
+---
 
-Conexión a Internet activa (el programa consulta datos en línea)
+## 🛠️ Requisitos
 
-Librería Gson de Google para parsear JSON
+* JDK 11 o superior (por el uso de `HttpClient`)
+* Conexión a Internet activa (el programa consulta datos en línea)
+* Librería [`Gson`](https://github.com/google/gson) de Google para parsear JSON
 
-📦 Instalación
-Clonar o descargar el repositorio.
+---
 
-Asegurarse de tener Gson en el classpath.
+## 📦 Instalación
 
-Si usás Maven, agregá esto al pom.xml:
+1. Clonar o descargar el repositorio.
+2. Asegurarse de tener Gson en el classpath.
 
-xml
-Copiar
-Editar
-<dependency>
-    <groupId>com.google.code.gson</groupId>
-    <artifactId>gson</artifactId>
-    <version>2.10.1</version>
-</dependency>
-Si no usás Maven, descargá el .jar desde Gson Releases y añadilo manualmente al proyecto.
+   * Si usás Maven, agregá esto al `pom.xml`:
 
-Compilar y ejecutar:
+     ```xml
+     <dependency>
+         <groupId>com.google.code.gson</groupId>
+         <artifactId>gson</artifactId>
+         <version>2.10.1</version>
+     </dependency>
+     ```
+   * Si no usás Maven, descargá el `.jar` desde [Gson Releases](https://github.com/google/gson/releases) y añadilo manualmente al proyecto.
+3. Compilar y ejecutar:
 
-bash
-Copiar
-Editar
+```bash
 javac *.java
 java Principal
+```
 
-🔐 Nota sobre la API
-Este programa usa una clave gratuita de la API de ExchangeRate. Si dejás de tener acceso, podés obtener tu propia clave gratuita registrándote en:
+---
 
-➡️ https://www.exchangerate-api.com
+## 🔐 Nota sobre la API
+
+Este programa usa una **clave gratuita** de la API de ExchangeRate. Si dejás de tener acceso, podés obtener tu propia clave gratuita registrándote en:
+
+➡️ [https://www.exchangerate-api.com](https://www.exchangerate-api.com)
 
 Y luego reemplazar el valor en esta línea:
 
-java
-Copiar
-Editar
+```java
 URI.create("https://v6.exchangerate-api.com/v6/TU_API_KEY/latest/USD")
+```
 
-📚 Créditos
-Desarrollado como ejercicio académico.
+---
 
-Utiliza la API pública de ExchangeRate para datos de conversión.
+## 📚 Créditos
 
-Deserialización de JSON implementada con la librería Gson (Google).
+* Desarrollado como ejercicio académico.
+* Utiliza la API pública de ExchangeRate para datos de conversión.
+* Deserialización de JSON implementada con la librería Gson (Google).
 
-🧠 Futuras mejoras (opcional)
-Permitir conversión entre cualquier par de monedas (no solo las predefinidas).
+---
 
-Agregar una interfaz gráfica con JavaFX o Swing.
+## 🧠 Futuras mejoras (opcional)
 
-Validación robusta de entradas del usuario.
+* Permitir conversión entre cualquier par de monedas (no solo las predefinidas).
+* Agregar una interfaz gráfica con JavaFX o Swing.
+* Validación robusta de entradas del usuario.
+* Cacheo local de tasas para evitar múltiples requests a la API.
 
-Cacheo local de tasas para evitar múltiples requests a la API.
+---
 
-📄 Licencia
+## 📄 Licencia
+
 Este proyecto es de uso educativo y puede ser modificado y distribuido libremente con fines no comerciales.
