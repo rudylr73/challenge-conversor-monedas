@@ -81,6 +81,7 @@ Copiar
 Editar
 javac *.java
 java Principal
+
 🔐 Nota sobre la API
 Este programa usa una clave gratuita de la API de ExchangeRate. Si dejás de tener acceso, podés obtener tu propia clave gratuita registrándote en:
 
@@ -92,6 +93,7 @@ java
 Copiar
 Editar
 URI.create("https://v6.exchangerate-api.com/v6/TU_API_KEY/latest/USD")
+
 📚 Créditos
 Desarrollado como ejercicio académico.
 
